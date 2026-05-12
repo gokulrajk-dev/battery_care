@@ -425,7 +425,6 @@ class Foreground_Service {
 
   static Future<void> song_play(prefs, String songPath) async {
     if(player.playing) return;
-
     await prefs.setBool('is_alarm_active', true);
     await player.setFilePath(songPath);
     await player.setLoopMode(LoopMode.one);
